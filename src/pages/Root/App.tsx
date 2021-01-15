@@ -71,6 +71,21 @@ const App: FC<AppProps> = ({
 	const themeStyle = isDarkTheme(currentTheme) ? darkTheme : lightTheme;
 	return (
 		<ThemeProvider theme={themeStyle}>
+			<div
+				style={{
+					padding: '10px',
+					textAlign: 'center',
+					backgroundColor: 'rgba(0,0,0,.85)',
+					color: '#C2C1E1',
+				}}
+			>
+				This is a deprecated UI – probs better not to use it. Permanently backed up on Arweave for
+				posterity by{' '}
+				<a href="https://twitter.com/tannedoaksprout" style={{ color: 'white' }}>
+					oaksprout
+				</a>
+				.
+			</div>
 			{appIsReady && (
 				<NotifyProvider networkId={networkId ? networkId : 1}>
 					<GlobalEventsGate />
